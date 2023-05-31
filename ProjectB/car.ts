@@ -28,6 +28,6 @@ export class Car {
         Doors: ${this.doors}
         Multimedia: ${this.multimedia}
         Suspension: ${this.suspension} 
-        Electrical System: ${this.electricalSystem}\n`)
+        Electrical System: ${this.electricalSystem}\n`);
     }
 }

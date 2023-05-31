@@ -9,11 +9,11 @@ export class NewsStation implements IObservable {
     addObserver(observer: IObserver): void {
         const index = this.observers.indexOf(observer);
         if (index === -1) {
-            console.log('A User has Subscribed')
+            console.log('A User has Subscribed');
             this.observers.push(observer);
         }
         else {
-            console.log('User is already Subscribed')
+            console.log('User is already Subscribed');
         }
     }
 
@@ -21,7 +21,7 @@ export class NewsStation implements IObservable {
         const index = this.observers.indexOf(observer);
         if (index !== -1) {
             this.observers.splice(index, 1);
-            console.log('\n A subscriber has unSubscribed \n')
+            console.log('\n A subscriber has unSubscribed \n');
         }
     }
 

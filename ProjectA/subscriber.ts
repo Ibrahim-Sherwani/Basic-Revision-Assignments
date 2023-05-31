@@ -9,7 +9,7 @@ export class Subscriber implements IObserver {
     constructor(observable: IObservable) {
         this.observable = observable;
         this.observable.addObserver(this);
-        this.subscribed = true
+        this.subscribed = true;
     }
     ["constructor"](observable: IObservable): void {
         throw new Error("Method not implemented.");
@@ -25,7 +25,7 @@ export class Subscriber implements IObserver {
             console.log('\n');
         }
         else {
-            console.log('User not Subscribed to any News Channel')
+            console.log('User not Subscribed to any News Channel');
         }
     }
 
@@ -39,22 +39,22 @@ export class Subscriber implements IObserver {
             console.log('\n');
         }
         else {
-            console.log('User not Subscribed to any News Channel')
+            console.log('User not Subscribed to any News Channel');
         }
     }
 
     unSubscribe(): void {
         if (this.subscribed) {
             this.observable.removeObserver(this);
-            this.subscribed = false
+            this.subscribed = false;
         } else {
-            console.log('User not Subscribed')
+            console.log('User not Subscribed');
         }
     }
 
     subscribe(observable: IObservable): void {
         if (this.subscribed) {
-            console.log('Only one subscription allowed at a time.')
+            console.log('Only one subscription allowed at a time.');
         }
         else {
             this.observable = observable;

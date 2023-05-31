@@ -27,6 +27,6 @@ const cars = carFactory.getCars();
 console.log(`Number of cars produced: ${carFactory.getCarsCount()} \n`);
 
 for (const car of cars) {
-    car.getDetails()
+    car.getDetails();
 }
 

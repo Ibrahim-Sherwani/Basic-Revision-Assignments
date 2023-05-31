@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var subscriber_1 = require("./subscriber");
+var newsStation_1 = require("./newsStation");
+var article_1 = require("./article");
+var newsStation = new newsStation_1.NewsStation();
+var subscriber1 = new subscriber_1.Subscriber(newsStation);
+var subscriber2 = new subscriber_1.Subscriber(newsStation);
+var article1 = new article_1.Article("Breaking News", "Breaking NewsBreaking NewsBreaking News");
+var article2 = new article_1.Article("Technology Update", "Technology UpdateTechnology UpdateTechnology UpdateTechnology UpdateTechnology Update");
+newsStation.addArticle(article1);
+newsStation.addArticle(article2);
+subscriber2.subscribe(newsStation);
+subscriber2.unSubscribe();
+newsStation.addArticle(article1);
